@@ -1,99 +1,96 @@
-# Anki Dictionary Deck Generator
+# Anki Vocabulary Skills
 
-一个用于生成 Anki 字典卡组的 Python 工具，支持词根词缀解析、音标、例句翻译和 TTS 自动播放。
+这个项目用于用 Codex skill 生成英语词库成品：
 
-## 卡片结构
+- `create-anki-dictionary`: 从 JSON 词库生成 Anki `.apkg`
+- `anki-audio-deck`: 从同一个 JSON 词库生成跟读 `.mp3`
 
-### 正面
-- 英文单词
-- 音标
-- 英文例句
-- 播放按钮（TTS 朗读单词和例句）
+## 目录约定
 
-### 背面
-- 英文单词
-- 音标
-- 词性
-- 词根词缀解析
-- 单词中文翻译
-- 英文例句
-- 例句中文翻译
-- 播放按钮
+每个词库一个独立目录，只放这个词库的最终成品：
 
-## 文件说明
-
-| 文件 | 说明 |
-|------|------|
-| `create_anki_deck.py` | 主生成脚本，包含 10 个示例单词 |
-| `template.py` | 通用模板，可用于生成其他单词卡组 |
-| `dictionary_deck.apkg` | 生成的 Anki 卡组文件 |
-| `SKILL.md` | Skill 说明文档 |
-
-## 依赖
-
-- Python 3
-- genanki
-
-```bash
-pip install genanki
+```text
+outputs/
+  immigration_vocabulary/
+    immigration_vocabulary.json
+    immigration_vocabulary.apkg
+    immigration_vocabulary.mp3
 ```
 
-## 使用方法
+临时语音片段缓存放在 `.cache/audio_segments/`，不放进词库成品目录。
 
-### 1. 修改单词数据
+## 词库 JSON
 
-编辑 `create_anki_deck.py` 中的 `words` 列表：
+词库文件使用以下结构：
 
-```python
-words = [
+```json
+{
+  "deckName": "Immigration Vocabulary",
+  "modelName": "Immigration Vocabulary Model",
+  "words": [
     {
-        'word': 'abandon',
-        'wordTranslation': '放弃',
-        'phonetic': '/əˈbændən/',
-        'partOfSpeech': 'v.',
-        'etymology': 'ab-离开 + band-捆绑',
-        'example': 'He had to abandon his dream.',
-        'translation': '他不得不放弃他的梦想。'
-    },
-    # 添加更多单词...
-]
+      "word": "visa",
+      "wordTranslation": "签证",
+      "phonetic": "/ˈviːzə/",
+      "partOfSpeech": "n.",
+      "etymology": "来自拉丁语 visa（被看过的）",
+      "example": "You need a valid visa to enter the country.",
+      "translation": "你需要有效签证才能进入该国。"
+    }
+  ]
+}
 ```
 
-### 2. 生成卡组
+## 安装依赖
 
 ```bash
-python3 create_anki_deck.py
+python3 -m pip install --user -r requirements.txt
 ```
 
-### 3. 导入 Anki
+## 生成 Anki 卡组
 
-1. 打开 Anki / AnkiDroid
-2. 导入 `dictionary_deck.apkg`
-3. 开始学习
+```bash
+python3 scripts/generate_deck.py \
+  --input outputs/immigration_vocabulary/immigration_vocabulary.json
+```
 
-## TTS 设置
+默认输出：
 
-卡组使用 Anki 官方 TTS 标签，自动调用系统语音朗读。
+```text
+outputs/immigration_vocabulary/immigration_vocabulary.apkg
+```
 
-### AnkiDroid 用户
+## 生成跟读音频
 
-1. 首次学习时会提示选择 TTS 语言，选择 **English (US)**
-2. 或进入 **设置 → 高级 → 文本转语音** 配置
+```bash
+python3 anki-audio-deck/scripts/generate_audio.py \
+  --input outputs/immigration_vocabulary/immigration_vocabulary.json
+```
 
-### 播放按钮
+默认输出：
 
-点击播放按钮可重新朗读单词和例句。
+```text
+outputs/immigration_vocabulary/immigration_vocabulary.mp3
+```
 
-## 示例单词
+音频规则：
 
-| 单词 | 音标 | 词根 | 翻译 |
-|------|------|------|------|
-| abandon | /əˈbændən/ | ab-离开 + band-捆绑 | 放弃 |
-| benevolent | /bɪˈnevələnt/ | bene-好 + vol-意愿 | 仁慈的 |
-| comprehend | /ˌkɒmprɪˈhend/ | com-完全 + hend-抓住 | 理解 |
-| contradict | /ˌkɒntrəˈdɪkt/ | contra-反 + dict-说 | 反驳 |
-| enthusiastic | /ɪnˌθjuːziˈæstɪk/ | en-进入 + thus-神 | 热情的 |
+- 标准美式发音，默认 `en-US-JennyNeural`
+- 单词后停顿 `1` 秒
+- 例句后停顿 `2` 秒，再进入下一组
 
-## License
+## 新增词库流程
 
-MIT
+1. 新建目录：`outputs/<deck_slug>/`
+2. 保存词库：`outputs/<deck_slug>/<deck_slug>.json`
+3. 运行一条命令生成 `.apkg` 和 `.mp3`
+
+```bash
+python3 scripts/build_vocabulary.py \
+  --input outputs/<deck_slug>/<deck_slug>.json
+```
+
+## Skill 文件
+
+- [SKILL.md](SKILL.md): Anki 卡组生成 skill
+- [anki-audio-deck/SKILL.md](anki-audio-deck/SKILL.md): MP3 跟读音频生成 skill

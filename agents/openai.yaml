@@ -1,0 +1,4 @@
+interface:
+  display_name: "Anki Dictionary Deck"
+  short_description: "Generate bilingual Anki vocabulary decks"
+  default_prompt: "Use $create-anki-dictionary to create a themed bilingual Anki vocabulary deck."

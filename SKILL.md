@@ -1,96 +1,99 @@
 ---
 name: create-anki-dictionary
-description: 根据提供的单词列表生成 Anki 字典卡组.apkg文件。支持词根词缀解析、音标、例句翻译。使用 genanki 库生成。
-arguments:
-  - name: words
-    description: 单词数据，格式为JSON数组。每个单词包含 word(英文), wordTranslation(中文), phonetic(音标), partOfSpeech(词性), etymology(词根), example(例句), translation(例句翻译)
-    required: true
+description: Use this skill when the user wants to create or update an Anki .apkg vocabulary deck from English words, Chinese translations, phonetics, parts of speech, etymology/root notes, example sentences, and Chinese example translations. Use it for new themed decks such as immigration, daily life, fitness, interview, legal, or exam vocabulary.
 ---
 
-# 创建 Anki 字典卡组
+# Create Anki Dictionary Deck
 
-根据用户提供的单词列表，生成 Anki 字典卡组 `.apkg` 文件。
+This skill creates Anki vocabulary decks with bilingual dictionary cards and English TTS.
 
-## 输入格式
+## Workflow
 
-用户提供 JSON 格式的单词数组，每个单词包含：
-- `word`: 英文单词
-- `wordTranslation`: 单词中文翻译
-- `phonetic`: 音标
-- `partOfSpeech`: 词性（如 v., adj., n.）
-- `etymology`: 词根词缀解析
-- `example`: 英文例句
-- `translation`: 例句中文翻译
+1. Collect or create word data with these exact fields:
+   `word`, `wordTranslation`, `phonetic`, `partOfSpeech`, `etymology`, `example`, `translation`.
+2. Keep examples natural and practical for the deck theme. For immigration or legal topics, prefer neutral official-language examples over harsh or stigmatizing phrasing.
+3. Save the data as JSON under a dedicated output folder:
 
-## 生成脚本
-
-使用 genanki 库生成卡组，模板结构：
-
-**正面**：
-- 单词
-- 音标
-- 英文例句
-- 播放按钮（TTS 同时播放单词和例句）
-
-**背面**：
-- 单词
-- 音标
-- 词性
-- 词根
-- 单词翻译
-- 英文例句
-- 例句翻译
-- 播放按钮
-
-## 执行步骤
-
-1. **准备数据**：解析用户提供的单词列表
-2. **创建脚本**：生成 Python 脚本调用 genanki
-3. **生成文件**：执行脚本生成 `.apkg` 文件
-4. **输出结果**：告知用户文件位置
-
-## 模板样式
-
-```css
-- 卡片背景：白色，圆角 10px，阴影
-- 单词：36px，深蓝色粗体
-- 音标：16px，灰色
-- 词性：16px，紫色
-- 词根：14px，紫色背景
-- 单词翻译：18px，红色
-- 例句：16px，斜体，浅灰背景
-- 翻译：16px，绿色
-- 播放按钮：蓝色，25px 圆角
+```text
+outputs/<deck_slug>/<deck_slug>.json
 ```
 
-## TTS 语法
-
-使用 Anki 官方 TTS 标签：
-```
-[anki:tts lang=en_US]{{Word}}. {{Example}}[/anki:tts]
-```
-
-## 示例单词数据
+Use either a list of word objects or this object shape:
 
 ```json
-[
-  {
-    "word": "abandon",
-    "wordTranslation": "放弃",
-    "phonetic": "/əˈbændən/",
-    "partOfSpeech": "v.",
-    "etymology": "ab-离开 + band-捆绑",
-    "example": "He had to abandon his dream.",
-    "translation": "他不得不放弃他的梦想。"
-  }
-]
+{
+  "deckName": "Immigration Vocabulary",
+  "modelName": "Immigration Vocabulary Model",
+  "words": [
+    {
+      "word": "visa",
+      "wordTranslation": "签证",
+      "phonetic": "/ˈviːzə/",
+      "partOfSpeech": "n.",
+      "etymology": "来自拉丁语 visa（被看过的）",
+      "example": "You need a valid visa to enter the country.",
+      "translation": "你需要有效签证才能进入该国。"
+    }
+  ]
+}
 ```
 
-## 依赖
+4. Generate the deck with the bundled script:
 
-- Python 3
-- genanki 库：`pip install genanki`
+```bash
+python3 scripts/generate_deck.py --input outputs/immigration_vocabulary/immigration_vocabulary.json
+```
 
-## 输出
+Optional overrides:
 
-生成的 `.apkg` 文件保存在 `/workspace/dictionary_deck.apkg`
+```bash
+python3 scripts/generate_deck.py --input outputs/interview_vocabulary/interview_vocabulary.json --deck-name "Interview Vocabulary"
+```
+
+By default, the `.apkg` is written next to the input JSON with the same basename.
+
+To generate both `.apkg` and `.mp3` for a completed deck directory, use:
+
+```bash
+python3 scripts/build_vocabulary.py --input outputs/immigration_vocabulary/immigration_vocabulary.json
+```
+
+## Validation
+
+Before finishing, run the generator and confirm it reports the expected word count. The script rejects:
+
+- missing required fields
+- empty field values
+- duplicate words, case-insensitive
+- invalid JSON shape
+
+If `genanki` is missing, install dependencies from the repository root:
+
+```bash
+python3 -m pip install --user -r requirements.txt
+```
+
+## Card Format
+
+Front:
+
+- English word
+- phonetic
+- English example
+- `[anki:tts lang=en_US]{{Word}}. {{Example}}[/anki:tts]`
+
+Back:
+
+- English word, phonetic, part of speech
+- etymology/root note
+- Chinese word translation
+- English example and Chinese translation
+- the same TTS control
+
+## Quality Bar
+
+- Each word should be useful for the requested theme, not just broadly related.
+- Prefer one clear sense per card. If a word has multiple important senses, create separate phrase cards.
+- Use conventional capitalization for abbreviations such as `USCIS`, `NVC`, `RFE`, and `NOA`.
+- Keep Chinese translations concise, but make example translations complete and natural.
+- Do not leave English placeholder text in Chinese fields.

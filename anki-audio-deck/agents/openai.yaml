@@ -1,0 +1,4 @@
+interface:
+  display_name: "Anki Audio Deck"
+  short_description: "Generate MP3 audio for vocabulary decks"
+  default_prompt: "Use $anki-audio-deck to generate a US English MP3 for this vocabulary deck."

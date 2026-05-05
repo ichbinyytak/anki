@@ -1,0 +1,96 @@
+{
+  "deckName": "Dictionary Deck",
+  "modelName": "Dictionary Deck Model",
+  "words": [
+    {
+      "word": "abandon",
+      "wordTranslation": "放弃",
+      "phonetic": "/əˈbændən/",
+      "partOfSpeech": "v.",
+      "etymology": "ab-离开 + band-捆绑",
+      "example": "He had to abandon his dream.",
+      "translation": "他不得不放弃他的梦想。"
+    },
+    {
+      "word": "benevolent",
+      "wordTranslation": "仁慈的",
+      "phonetic": "/bɪˈnevələnt/",
+      "partOfSpeech": "adj.",
+      "etymology": "bene-好 + vol-意愿",
+      "example": "The benevolent donor gave millions to charity.",
+      "translation": "那位仁慈的捐赠者向慈善机构捐了数百万。"
+    },
+    {
+      "word": "comprehend",
+      "wordTranslation": "理解",
+      "phonetic": "/ˌkɒmprɪˈhend/",
+      "partOfSpeech": "v.",
+      "etymology": "com-完全 + pre-预先 + hend-抓住",
+      "example": "I couldn't comprehend the complex theory.",
+      "translation": "我无法理解这个复杂的理论。"
+    },
+    {
+      "word": "contradict",
+      "wordTranslation": "反驳",
+      "phonetic": "/ˌkɒntrəˈdɪkt/",
+      "partOfSpeech": "v.",
+      "etymology": "contra-反 + dict-说",
+      "example": "The witness contradicted the defendant's statement.",
+      "translation": "证人的陈述与被告的供词相矛盾。"
+    },
+    {
+      "word": "enthusiastic",
+      "wordTranslation": "热情的",
+      "phonetic": "/ɪnˌθjuːziˈæstɪk/",
+      "partOfSpeech": "adj.",
+      "etymology": "en-进入 + thus-神 + iast-疯狂的",
+      "example": "She was enthusiastic about the new project.",
+      "translation": "她对这个新项目充满热情。"
+    },
+    {
+      "word": "magnificent",
+      "wordTranslation": "壮丽的",
+      "phonetic": "/mæɡˈnɪfɪsnt/",
+      "partOfSpeech": "adj.",
+      "etymology": "magn-大 + fic-做",
+      "example": "The palace was magnificent.",
+      "translation": "那座宫殿富丽堂皇。"
+    },
+    {
+      "word": "photograph",
+      "wordTranslation": "拍照",
+      "phonetic": "/ˈfəʊtəɡrɑːf/",
+      "partOfSpeech": "v.",
+      "etymology": "photo-光 + graph-写",
+      "example": "I want to photograph the beautiful sunset.",
+      "translation": "我想拍摄那美丽的日落。"
+    },
+    {
+      "word": "transparent",
+      "wordTranslation": "透明的",
+      "phonetic": "/trænsˈpærənt/",
+      "partOfSpeech": "adj.",
+      "etymology": "trans-穿过 + par-出现",
+      "example": "The water was so transparent.",
+      "translation": "那水清澈透明。"
+    },
+    {
+      "word": "unanimous",
+      "wordTranslation": "一致的",
+      "phonetic": "/juːˈnænɪməs/",
+      "partOfSpeech": "adj.",
+      "etymology": "un-一 + anim-心",
+      "example": "The decision was unanimous.",
+      "translation": "那项决定获得全票通过。"
+    },
+    {
+      "word": "vocabulary",
+      "wordTranslation": "词汇",
+      "phonetic": "/vəˈkæbjʊləri/",
+      "partOfSpeech": "n.",
+      "etymology": "voc-声音 + abul-能够",
+      "example": "Reading helps expand your vocabulary.",
+      "translation": "阅读有助于扩大词汇量。"
+    }
+  ]
+}

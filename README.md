@@ -31,7 +31,7 @@ outputs/
 
 ## 词库 JSON
 
-词库文件使用以下结构：
+词库文件使用以下结构。`deckName` 和 `modelName` 必须为每个词库设置不同名称，否则 Anki 导入时可能和已有卡组冲突。
 
 ```json
 {

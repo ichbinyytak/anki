@@ -92,7 +92,7 @@ CARD_CSS = """
 
 def stable_id(value):
     digest = hashlib.sha256(value.encode("utf-8")).hexdigest()
-    return int(digest[:8], 16)
+    return int(digest[:8], 16) % 2_000_000_000 + 1
 
 
 def slugify(value):

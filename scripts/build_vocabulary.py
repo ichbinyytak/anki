@@ -11,10 +11,11 @@ def run(command):
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Generate Markdown, APKG, and MP3 for one vocabulary JSON.")
+    parser = argparse.ArgumentParser(description="Generate Markdown, APKG, English MP3, and bilingual MP3 for one vocabulary JSON.")
     parser.add_argument("--input", required=True, help="Path to outputs/<deck>/<deck>.json.")
-    parser.add_argument("--word-pause", default="1", help="Seconds between word and example.")
-    parser.add_argument("--card-pause", default="2", help="Seconds between cards.")
+    parser.add_argument("--word-pause", default="0.5", help="Seconds between word and example in English audio.")
+    parser.add_argument("--card-pause", default="0.5", help="Seconds between cards in English audio.")
+    parser.add_argument("--sentence-pause", default="0.5", help="Seconds after each sentence in bilingual audio.")
     return parser.parse_args()
 
 
@@ -28,7 +29,9 @@ def main():
     text_script = repo_root / "scripts" / "generate_text.py"
     deck_script = repo_root / "scripts" / "generate_deck.py"
     audio_script = repo_root / "anki-audio-deck" / "scripts" / "generate_audio.py"
+    bilingual_audio_script = repo_root / "scripts" / "generate_bilingual_audio.py"
     cache_dir = repo_root / ".cache" / "audio_segments" / input_path.stem
+    bilingual_cache_dir = repo_root / ".cache" / "bilingual_audio_segments" / f"{input_path.stem}_bilingual"
 
     run([sys.executable, str(text_script), "--input", str(input_path)])
     run([sys.executable, str(deck_script), "--input", str(input_path)])
@@ -43,6 +46,16 @@ def main():
         args.word_pause,
         "--card-pause",
         args.card_pause,
+    ])
+    run([
+        sys.executable,
+        str(bilingual_audio_script),
+        "--input",
+        str(input_path),
+        "--cache-dir",
+        str(bilingual_cache_dir),
+        "--sentence-pause",
+        args.sentence_pause,
     ])
 
 

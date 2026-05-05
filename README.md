@@ -16,6 +16,7 @@ outputs/
     immigration_vocabulary.md
     immigration_vocabulary.apkg
     immigration_vocabulary.mp3
+    immigration_vocabulary_bilingual.mp3
 ```
 
 临时语音片段缓存放在 `.cache/audio_segments/`，不放进词库成品目录。
@@ -83,7 +84,7 @@ python3 scripts/generate_deck.py \
 outputs/immigration_vocabulary/immigration_vocabulary.apkg
 ```
 
-## 生成跟读音频
+## 生成全英文跟读音频
 
 ```bash
 python3 anki-audio-deck/scripts/generate_audio.py \
@@ -99,14 +100,31 @@ outputs/immigration_vocabulary/immigration_vocabulary.mp3
 音频规则：
 
 - 标准美式发音，默认 `en-US-JennyNeural`
-- 单词后停顿 `1` 秒
-- 例句后停顿 `2` 秒，再进入下一组
+- 单词后停顿 `0.5` 秒
+- 例句后停顿 `0.5` 秒，再进入下一组
+
+## 生成中英文跟读音频
+
+如果需要把中文释义和例句翻译也读出来，可以生成双语版：
+
+```bash
+python3 scripts/generate_bilingual_audio.py \
+  --input outputs/immigration_vocabulary/immigration_vocabulary.json
+```
+
+默认输出：
+
+```text
+outputs/immigration_vocabulary/immigration_vocabulary_bilingual.mp3
+```
+
+双语版会读取：英文单词、中文释义、英文例句、中文翻译。默认每句后停顿 `0.5` 秒，使用中英混读语音。
 
 ## 新增词库流程
 
 1. 新建目录：`outputs/<deck_slug>/`
 2. 保存词库：`outputs/<deck_slug>/<deck_slug>.json`
-3. 运行一条命令生成 `.md`、`.apkg` 和 `.mp3`
+3. 运行一条命令生成 `.md`、`.apkg`、全英文 `.mp3` 和中英文 `_bilingual.mp3`
 
 ```bash
 python3 scripts/build_vocabulary.py \
@@ -116,7 +134,7 @@ python3 scripts/build_vocabulary.py \
 生成顺序固定为：
 
 ```text
-JSON -> Markdown -> APKG -> MP3
+JSON -> Markdown -> APKG -> English MP3 -> Bilingual MP3
 ```
 
 如果需要修改词条，只改 JSON，然后重新运行构建命令。

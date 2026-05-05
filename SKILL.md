@@ -1,11 +1,11 @@
 ---
 name: create-anki-dictionary
-description: Use this skill when the user wants to create or update a vocabulary JSON source and generate human-readable Markdown plus an Anki .apkg deck from English words, Chinese translations, phonetics, parts of speech, etymology/root notes, example sentences, and Chinese example translations. Use it for new themed decks such as immigration, daily life, fitness, interview, legal, or exam vocabulary.
+description: Use this skill when the user wants to create or update a vocabulary JSON source and generate human-readable Markdown, an Anki .apkg deck, English-only MP3 audio, and bilingual English-Chinese MP3 audio from English words, Chinese translations, phonetics, parts of speech, etymology/root notes, example sentences, and Chinese example translations. Use it for new themed decks such as immigration, daily life, fitness, interview, legal, or exam vocabulary.
 ---
 
 # Create Anki Dictionary Deck
 
-This skill creates vocabulary source JSON, a human-readable Markdown text version, and Anki decks with bilingual dictionary cards and English TTS.
+This skill creates vocabulary source JSON, a human-readable Markdown text version, Anki decks with bilingual dictionary cards, English-only MP3 audio, and bilingual English-Chinese MP3 audio.
 
 ## Workflow
 
@@ -58,11 +58,16 @@ python3 scripts/generate_deck.py --input outputs/interview_vocabulary/interview_
 
 By default, the `.apkg` is written next to the input JSON with the same basename.
 
-To generate `.md`, `.apkg`, and `.mp3` for a completed deck directory, use:
+To generate `.md`, `.apkg`, English `.mp3`, and bilingual `_bilingual.mp3` for a completed deck directory, use:
 
 ```bash
 python3 scripts/build_vocabulary.py --input outputs/immigration_vocabulary/immigration_vocabulary.json
 ```
+
+Audio defaults:
+
+- English audio reads `word` then `example`, with `0.5` second after the word and `0.5` second after the example.
+- Bilingual audio reads `word`, `wordTranslation`, `example`, then `translation`, with `0.5` second after each sentence.
 
 ## Validation
 

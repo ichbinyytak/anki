@@ -11,7 +11,7 @@ def run(command):
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Generate APKG and MP3 for one vocabulary JSON.")
+    parser = argparse.ArgumentParser(description="Generate Markdown, APKG, and MP3 for one vocabulary JSON.")
     parser.add_argument("--input", required=True, help="Path to outputs/<deck>/<deck>.json.")
     parser.add_argument("--word-pause", default="1", help="Seconds between word and example.")
     parser.add_argument("--card-pause", default="2", help="Seconds between cards.")
@@ -25,10 +25,12 @@ def main():
         raise SystemExit(f"Input not found: {input_path}")
 
     repo_root = Path(__file__).resolve().parents[1]
+    text_script = repo_root / "scripts" / "generate_text.py"
     deck_script = repo_root / "scripts" / "generate_deck.py"
     audio_script = repo_root / "anki-audio-deck" / "scripts" / "generate_audio.py"
     cache_dir = repo_root / ".cache" / "audio_segments" / input_path.stem
 
+    run([sys.executable, str(text_script), "--input", str(input_path)])
     run([sys.executable, str(deck_script), "--input", str(input_path)])
     run([
         sys.executable,

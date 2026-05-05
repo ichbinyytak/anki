@@ -1,8 +1,8 @@
 # Anki Vocabulary Skills
 
-这个项目用于用 Codex skill 生成英语词库成品：
+这个项目用于用 Codex skill 生成英语词库成品。核心原则是：**JSON 是唯一源文件**，文字版、Anki 卡组和跟读音频都从同一个 JSON 生成。
 
-- `create-anki-dictionary`: 从 JSON 词库生成 Anki `.apkg`
+- `create-anki-dictionary`: 从 JSON 词库生成文字版 `.md` 和 Anki `.apkg`
 - `anki-audio-deck`: 从同一个 JSON 词库生成跟读 `.mp3`
 
 ## 目录约定
@@ -13,11 +13,21 @@
 outputs/
   immigration_vocabulary/
     immigration_vocabulary.json
+    immigration_vocabulary.md
     immigration_vocabulary.apkg
     immigration_vocabulary.mp3
 ```
 
 临时语音片段缓存放在 `.cache/audio_segments/`，不放进词库成品目录。
+
+## 现有词库
+
+| 词库 | 词条数 | 目录 |
+|------|--------|------|
+| Dictionary Deck | 10 | `outputs/dictionary_deck/` |
+| Daily Life Vocabulary | 150 | `outputs/daily_life_vocabulary/` |
+| Fitness Vocabulary | 140 | `outputs/fitness_vocabulary/` |
+| Immigration Vocabulary | 147 | `outputs/immigration_vocabulary/` |
 
 ## 词库 JSON
 
@@ -45,6 +55,19 @@ outputs/
 
 ```bash
 python3 -m pip install --user -r requirements.txt
+```
+
+## 生成文字版
+
+```bash
+python3 scripts/generate_text.py \
+  --input outputs/immigration_vocabulary/immigration_vocabulary.json
+```
+
+默认输出：
+
+```text
+outputs/immigration_vocabulary/immigration_vocabulary.md
 ```
 
 ## 生成 Anki 卡组
@@ -83,14 +106,29 @@ outputs/immigration_vocabulary/immigration_vocabulary.mp3
 
 1. 新建目录：`outputs/<deck_slug>/`
 2. 保存词库：`outputs/<deck_slug>/<deck_slug>.json`
-3. 运行一条命令生成 `.apkg` 和 `.mp3`
+3. 运行一条命令生成 `.md`、`.apkg` 和 `.mp3`
 
 ```bash
 python3 scripts/build_vocabulary.py \
   --input outputs/<deck_slug>/<deck_slug>.json
 ```
 
+生成顺序固定为：
+
+```text
+JSON -> Markdown -> APKG -> MP3
+```
+
+如果需要修改词条，只改 JSON，然后重新运行构建命令。
+
 ## Skill 文件
 
 - [SKILL.md](SKILL.md): Anki 卡组生成 skill
 - [anki-audio-deck/SKILL.md](anki-audio-deck/SKILL.md): MP3 跟读音频生成 skill
+
+## 远程仓库
+
+```bash
+git remote add origin https://github.com/ichbinyytak/anki.git
+git push origin master
+```

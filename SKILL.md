@@ -1,11 +1,11 @@
 ---
 name: create-anki-dictionary
-description: Use this skill when the user wants to create or update an Anki .apkg vocabulary deck from English words, Chinese translations, phonetics, parts of speech, etymology/root notes, example sentences, and Chinese example translations. Use it for new themed decks such as immigration, daily life, fitness, interview, legal, or exam vocabulary.
+description: Use this skill when the user wants to create or update a vocabulary JSON source and generate human-readable Markdown plus an Anki .apkg deck from English words, Chinese translations, phonetics, parts of speech, etymology/root notes, example sentences, and Chinese example translations. Use it for new themed decks such as immigration, daily life, fitness, interview, legal, or exam vocabulary.
 ---
 
 # Create Anki Dictionary Deck
 
-This skill creates Anki vocabulary decks with bilingual dictionary cards and English TTS.
+This skill creates vocabulary source JSON, a human-readable Markdown text version, and Anki decks with bilingual dictionary cards and English TTS.
 
 ## Workflow
 
@@ -38,7 +38,13 @@ Use either a list of word objects or this object shape:
 }
 ```
 
-4. Generate the deck with the bundled script:
+4. Generate the Markdown text version:
+
+```bash
+python3 scripts/generate_text.py --input outputs/immigration_vocabulary/immigration_vocabulary.json
+```
+
+5. Generate the deck with the bundled script:
 
 ```bash
 python3 scripts/generate_deck.py --input outputs/immigration_vocabulary/immigration_vocabulary.json
@@ -52,7 +58,7 @@ python3 scripts/generate_deck.py --input outputs/interview_vocabulary/interview_
 
 By default, the `.apkg` is written next to the input JSON with the same basename.
 
-To generate both `.apkg` and `.mp3` for a completed deck directory, use:
+To generate `.md`, `.apkg`, and `.mp3` for a completed deck directory, use:
 
 ```bash
 python3 scripts/build_vocabulary.py --input outputs/immigration_vocabulary/immigration_vocabulary.json

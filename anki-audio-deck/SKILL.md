@@ -9,6 +9,7 @@ Create one MP3 audio file for a vocabulary deck. The output filename should matc
 
 ```text
 outputs/<deck_slug>/<deck_slug>.json
+outputs/<deck_slug>/<deck_slug>.md
 outputs/<deck_slug>/<deck_slug>.apkg
 outputs/<deck_slug>/<deck_slug>.mp3
 ```

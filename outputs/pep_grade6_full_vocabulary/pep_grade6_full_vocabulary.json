@@ -1,0 +1,681 @@
+{
+  "deckName": "PEP Grade 6 Full Vocabulary",
+  "modelName": "PEP Grade 6 Full Vocabulary Model",
+  "words": [
+    {
+      "word": "museum",
+      "wordTranslation": "博物馆",
+      "phonetic": "/mjuˈziːəm/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六上 Unit 1 课本词汇",
+      "example": "Where is the museum shop?",
+      "translation": "博物馆商店在哪里？"
+    },
+    {
+      "word": "bookstore",
+      "wordTranslation": "书店",
+      "phonetic": "/ˈbʊkstɔːr/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六上 Unit 1 课本词汇",
+      "example": "Turn left at the bookstore.",
+      "translation": "在书店那里左转。"
+    },
+    {
+      "word": "left",
+      "wordTranslation": "左边；向左",
+      "phonetic": "/left/",
+      "partOfSpeech": "adj. / adv.",
+      "etymology": "PEP 六上 Unit 1 课本词汇",
+      "example": "Turn left at the bookstore.",
+      "translation": "在书店那里左转。"
+    },
+    {
+      "word": "interesting",
+      "wordTranslation": "有趣的",
+      "phonetic": "/ˈɪntrəstɪŋ/",
+      "partOfSpeech": "adj.",
+      "etymology": "PEP 六上 Unit 1 课本词汇",
+      "example": "What an interesting film!",
+      "translation": "多么有趣的一部电影啊！"
+    },
+    {
+      "word": "Italian",
+      "wordTranslation": "意大利的",
+      "phonetic": "/ɪˈtæliən/",
+      "partOfSpeech": "adj.",
+      "etymology": "PEP 六上 Unit 1 课本词汇",
+      "example": "I'm going to buy some Italian food.",
+      "translation": "我打算去买一些意大利食物。"
+    },
+    {
+      "word": "restaurant",
+      "wordTranslation": "餐馆",
+      "phonetic": "/ˈrestrɒnt/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六上 Unit 1 课本词汇",
+      "example": "The restaurant is next to the park.",
+      "translation": "餐馆就在公园旁边。"
+    },
+    {
+      "word": "on foot",
+      "wordTranslation": "步行",
+      "phonetic": "/ɒn fʊt/",
+      "partOfSpeech": "prep. phrase",
+      "etymology": "PEP 六上 Unit 2 课本词汇",
+      "example": "I usually come to school on foot.",
+      "translation": "我通常步行来学校。"
+    },
+    {
+      "word": "bus",
+      "wordTranslation": "公共汽车",
+      "phonetic": "/bʌs/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六上 Unit 2 课本词汇",
+      "example": "Sometimes I come by bus.",
+      "translation": "有时候我坐公交车来。"
+    },
+    {
+      "word": "slow",
+      "wordTranslation": "慢的；慢下来",
+      "phonetic": "/sləʊ/",
+      "partOfSpeech": "adj. / v.",
+      "etymology": "PEP 六上 Unit 2 课本词汇",
+      "example": "Slow down and stop at a yellow light.",
+      "translation": "黄灯时要减速并停下来。"
+    },
+    {
+      "word": "stop",
+      "wordTranslation": "停下",
+      "phonetic": "/stɒp/",
+      "partOfSpeech": "v.",
+      "etymology": "PEP 六上 Unit 2 课本词汇",
+      "example": "Slow down and stop at a yellow light.",
+      "translation": "黄灯时要减速并停下来。"
+    },
+    {
+      "word": "helmet",
+      "wordTranslation": "头盔",
+      "phonetic": "/ˈhelmɪt/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六上 Unit 2 课本词汇",
+      "example": "You must wear a helmet.",
+      "translation": "你必须戴头盔。"
+    },
+    {
+      "word": "traffic",
+      "wordTranslation": "交通",
+      "phonetic": "/ˈtræfɪk/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六上 Unit 2 课本词汇",
+      "example": "Pay attention to the traffic lights.",
+      "translation": "注意交通信号灯。"
+    },
+    {
+      "word": "film",
+      "wordTranslation": "电影",
+      "phonetic": "/fɪlm/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六上 Unit 3 课本词汇",
+      "example": "We're going to see a film about space travel.",
+      "translation": "我们打算去看一部关于太空旅行的电影。"
+    },
+    {
+      "word": "tonight",
+      "wordTranslation": "在今晚",
+      "phonetic": "/təˈnaɪt/",
+      "partOfSpeech": "adv.",
+      "etymology": "PEP 六上 Unit 3 课本词汇",
+      "example": "What are you going to do tonight?",
+      "translation": "你今晚打算做什么？"
+    },
+    {
+      "word": "tomorrow",
+      "wordTranslation": "明天",
+      "phonetic": "/təˈmɒrəʊ/",
+      "partOfSpeech": "adv.",
+      "etymology": "PEP 六上 Unit 3 课本词汇",
+      "example": "What are you going to do tomorrow?",
+      "translation": "你明天打算做什么？"
+    },
+    {
+      "word": "dictionary",
+      "wordTranslation": "词典",
+      "phonetic": "/ˈdɪkʃənəri/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六上 Unit 3 课本词汇",
+      "example": "I'm going to buy a dictionary.",
+      "translation": "我打算去买一本词典。"
+    },
+    {
+      "word": "postcard",
+      "wordTranslation": "明信片",
+      "phonetic": "/ˈpəʊstkɑːd/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六上 Unit 3 课本词汇",
+      "example": "I'm going to buy a postcard.",
+      "translation": "我打算去买一张明信片。"
+    },
+    {
+      "word": "comic book",
+      "wordTranslation": "连环画册",
+      "phonetic": "/ˈkɒmɪk bʊk/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六上 Unit 3 课本词汇",
+      "example": "I'm going to buy a comic book.",
+      "translation": "我打算去买一本连环画册。"
+    },
+    {
+      "word": "hobby",
+      "wordTranslation": "业余爱好",
+      "phonetic": "/ˈhɒbi/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六上 Unit 4 课本词汇",
+      "example": "What are Peter's hobbies?",
+      "translation": "彼得的爱好是什么？"
+    },
+    {
+      "word": "puzzle",
+      "wordTranslation": "谜；字谜",
+      "phonetic": "/ˈpʌzl/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六上 Unit 4 课本词汇",
+      "example": "Does he like doing word puzzles?",
+      "translation": "他喜欢猜字谜吗？"
+    },
+    {
+      "word": "hiking",
+      "wordTranslation": "远足",
+      "phonetic": "/ˈhaɪkɪŋ/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六上 Unit 4 课本词汇",
+      "example": "He also likes going hiking.",
+      "translation": "他也喜欢去远足。"
+    },
+    {
+      "word": "pen pal",
+      "wordTranslation": "笔友",
+      "phonetic": "/ˈpen pæl/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六上 Unit 4 课本词汇",
+      "example": "Can I also be his pen pal?",
+      "translation": "我也能成为他的笔友吗？"
+    },
+    {
+      "word": "share",
+      "wordTranslation": "分享",
+      "phonetic": "/ʃeə(r)/",
+      "partOfSpeech": "v.",
+      "etymology": "PEP 六上 Unit 4 课本词汇",
+      "example": "We can share our hobbies.",
+      "translation": "我们可以分享各自的爱好。"
+    },
+    {
+      "word": "amazing",
+      "wordTranslation": "令人惊奇的",
+      "phonetic": "/əˈmeɪzɪŋ/",
+      "partOfSpeech": "adj.",
+      "etymology": "PEP 六上 Unit 4 课本词汇",
+      "example": "That's amazing!",
+      "translation": "那真令人惊奇！"
+    },
+    {
+      "word": "factory worker",
+      "wordTranslation": "工厂工人",
+      "phonetic": "/ˈfæktri ˈwɜːkə(r)/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六上 Unit 5 课本词汇",
+      "example": "My uncle is a factory worker.",
+      "translation": "我叔叔是一名工厂工人。"
+    },
+    {
+      "word": "postman",
+      "wordTranslation": "邮递员",
+      "phonetic": "/ˈpəʊstmən/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六上 Unit 5 课本词汇",
+      "example": "My father is a postman.",
+      "translation": "我爸爸是一名邮递员。"
+    },
+    {
+      "word": "businessman",
+      "wordTranslation": "商人；企业家",
+      "phonetic": "/ˈbɪznəsmæn/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六上 Unit 5 课本词汇",
+      "example": "He's a businessman.",
+      "translation": "他是一名商人。"
+    },
+    {
+      "word": "police officer",
+      "wordTranslation": "警察",
+      "phonetic": "/pəˈliːs ˈɒfɪsə(r)/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六上 Unit 5 课本词汇",
+      "example": "He is a police officer.",
+      "translation": "他是一名警察。"
+    },
+    {
+      "word": "scientist",
+      "wordTranslation": "科学家",
+      "phonetic": "/ˈsaɪəntɪst/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六上 Unit 5 课本词汇",
+      "example": "He wants to be a scientist.",
+      "translation": "他想成为一名科学家。"
+    },
+    {
+      "word": "pilot",
+      "wordTranslation": "飞行员",
+      "phonetic": "/ˈpaɪlət/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六上 Unit 5 课本词汇",
+      "example": "My aunt is a pilot.",
+      "translation": "我姑姑是一名飞行员。"
+    },
+    {
+      "word": "angry",
+      "wordTranslation": "生气的",
+      "phonetic": "/ˈæŋɡri/",
+      "partOfSpeech": "adj.",
+      "etymology": "PEP 六上 Unit 6 课本词汇",
+      "example": "The cat is angry with them.",
+      "translation": "那只猫生他们的气了。"
+    },
+    {
+      "word": "afraid",
+      "wordTranslation": "害怕的",
+      "phonetic": "/əˈfreɪd/",
+      "partOfSpeech": "adj.",
+      "etymology": "PEP 六上 Unit 6 课本词汇",
+      "example": "The mice are afraid of the cat.",
+      "translation": "老鼠们害怕那只猫。"
+    },
+    {
+      "word": "sad",
+      "wordTranslation": "难过的",
+      "phonetic": "/sæd/",
+      "partOfSpeech": "adj.",
+      "etymology": "PEP 六上 Unit 6 课本词汇",
+      "example": "She is sad.",
+      "translation": "她很难过。"
+    },
+    {
+      "word": "worried",
+      "wordTranslation": "担心的",
+      "phonetic": "/ˈwʌrid/",
+      "partOfSpeech": "adj.",
+      "etymology": "PEP 六上 Unit 6 课本词汇",
+      "example": "Sarah is worried.",
+      "translation": "萨拉很担心。"
+    },
+    {
+      "word": "happy",
+      "wordTranslation": "高兴的",
+      "phonetic": "/ˈhæpi/",
+      "partOfSpeech": "adj.",
+      "etymology": "PEP 六上 Unit 6 课本词汇",
+      "example": "The cat is happy.",
+      "translation": "那只猫很高兴。"
+    },
+    {
+      "word": "doctor",
+      "wordTranslation": "医生",
+      "phonetic": "/ˈdɒktə(r)/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六上 Unit 6 课本词汇",
+      "example": "You should see a doctor.",
+      "translation": "你应该去看医生。"
+    },
+    {
+      "word": "taller",
+      "wordTranslation": "更高的",
+      "phonetic": "/ˈtɔːlə(r)/",
+      "partOfSpeech": "adj.",
+      "etymology": "PEP 六下 Unit 1 课本词汇",
+      "example": "You're taller than me.",
+      "translation": "你比我高。"
+    },
+    {
+      "word": "shorter",
+      "wordTranslation": "更矮的；更短的",
+      "phonetic": "/ˈʃɔːtə(r)/",
+      "partOfSpeech": "adj.",
+      "etymology": "PEP 六下 Unit 1 课本词汇",
+      "example": "I'm shorter than you.",
+      "translation": "我比你矮。"
+    },
+    {
+      "word": "stronger",
+      "wordTranslation": "更强壮的",
+      "phonetic": "/ˈstrɒŋɡə(r)/",
+      "partOfSpeech": "adj.",
+      "etymology": "PEP 六下 Unit 1 课本词汇",
+      "example": "You're stronger than me.",
+      "translation": "你比我更强壮。"
+    },
+    {
+      "word": "older",
+      "wordTranslation": "年龄更大的",
+      "phonetic": "/ˈəʊldə(r)/",
+      "partOfSpeech": "adj.",
+      "etymology": "PEP 六下 Unit 1 课本词汇",
+      "example": "How old are you? I'm older than you.",
+      "translation": "你几岁？我比你年长。"
+    },
+    {
+      "word": "younger",
+      "wordTranslation": "更年轻的",
+      "phonetic": "/ˈjʌŋɡə(r)/",
+      "partOfSpeech": "adj.",
+      "etymology": "PEP 六下 Unit 1 课本词汇",
+      "example": "You're younger than me.",
+      "translation": "你比我更年轻。"
+    },
+    {
+      "word": "centimeter",
+      "wordTranslation": "厘米",
+      "phonetic": "/ˈsentɪmiːtə(r)/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六下 Unit 1 课本词汇",
+      "example": "I'm 1.65 meters.",
+      "translation": "我身高一米六五。"
+    },
+    {
+      "word": "than",
+      "wordTranslation": "比",
+      "phonetic": "/ðæn/",
+      "partOfSpeech": "prep. / conj.",
+      "etymology": "PEP 六下 Unit 1 课本词汇",
+      "example": "This one is taller than that one.",
+      "translation": "这个比那个更高。"
+    },
+    {
+      "word": "dinosaur",
+      "wordTranslation": "恐龙",
+      "phonetic": "/ˈdaɪnəsɔː(r)/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六下 Unit 1 课本词汇",
+      "example": "How tall is that dinosaur?",
+      "translation": "那只恐龙有多高？"
+    },
+    {
+      "word": "hall",
+      "wordTranslation": "大厅",
+      "phonetic": "/hɔːl/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六下 Unit 1 课本词汇",
+      "example": "Let's go to the hall.",
+      "translation": "我们去大厅吧。"
+    },
+    {
+      "word": "cleaned",
+      "wordTranslation": "打扫了",
+      "phonetic": "/kliːnd/",
+      "partOfSpeech": "v.",
+      "etymology": "PEP 六下 Unit 2 课本词汇",
+      "example": "I cleaned my room.",
+      "translation": "我打扫了我的房间。"
+    },
+    {
+      "word": "stayed",
+      "wordTranslation": "待在",
+      "phonetic": "/steɪd/",
+      "partOfSpeech": "v.",
+      "etymology": "PEP 六下 Unit 2 课本词汇",
+      "example": "I stayed at home with your grandma.",
+      "translation": "我和你奶奶待在家里。"
+    },
+    {
+      "word": "washed",
+      "wordTranslation": "洗了",
+      "phonetic": "/wɒʃt/",
+      "partOfSpeech": "v.",
+      "etymology": "PEP 六下 Unit 2 课本词汇",
+      "example": "I washed my clothes.",
+      "translation": "我洗了我的衣服。"
+    },
+    {
+      "word": "watched",
+      "wordTranslation": "看了",
+      "phonetic": "/wɒtʃt/",
+      "partOfSpeech": "v.",
+      "etymology": "PEP 六下 Unit 2 课本词汇",
+      "example": "I watched TV.",
+      "translation": "我看电视了。"
+    },
+    {
+      "word": "had",
+      "wordTranslation": "患病；吃；有",
+      "phonetic": "/hæd/",
+      "partOfSpeech": "v.",
+      "etymology": "PEP 六下 Unit 2 课本词汇",
+      "example": "I had a cold.",
+      "translation": "我感冒了。"
+    },
+    {
+      "word": "slept",
+      "wordTranslation": "睡觉",
+      "phonetic": "/slept/",
+      "partOfSpeech": "v.",
+      "etymology": "PEP 六下 Unit 2 课本词汇",
+      "example": "I slept all day.",
+      "translation": "我睡了一整天。"
+    },
+    {
+      "word": "read",
+      "wordTranslation": "读",
+      "phonetic": "/red/",
+      "partOfSpeech": "v.",
+      "etymology": "PEP 六下 Unit 2 课本词汇",
+      "example": "I read a book.",
+      "translation": "我读了一本书。"
+    },
+    {
+      "word": "last weekend",
+      "wordTranslation": "上周末",
+      "phonetic": "/lɑːst ˌwiːkˈend/",
+      "partOfSpeech": "time phrase",
+      "etymology": "PEP 六下 Unit 2 课本词汇",
+      "example": "What did you do last weekend?",
+      "translation": "你上周末做了什么？"
+    },
+    {
+      "word": "yesterday",
+      "wordTranslation": "昨天",
+      "phonetic": "/ˈjestədeɪ/",
+      "partOfSpeech": "adv.",
+      "etymology": "PEP 六下 Unit 2 课本词汇",
+      "example": "I saw a film yesterday.",
+      "translation": "我昨天看了一场电影。"
+    },
+    {
+      "word": "went",
+      "wordTranslation": "去（go的过去式）",
+      "phonetic": "/went/",
+      "partOfSpeech": "v.",
+      "etymology": "PEP 六下 Unit 3 课本词汇",
+      "example": "Where did you go?",
+      "translation": "你去哪儿了？"
+    },
+    {
+      "word": "camp",
+      "wordTranslation": "野营",
+      "phonetic": "/kæmp/",
+      "partOfSpeech": "n. / v.",
+      "etymology": "PEP 六下 Unit 3 课本词汇",
+      "example": "We went camping.",
+      "translation": "我们去野营了。"
+    },
+    {
+      "word": "went camping",
+      "wordTranslation": "去野营了",
+      "phonetic": "/went ˈkæmpɪŋ/",
+      "partOfSpeech": "v. phrase",
+      "etymology": "PEP 六下 Unit 3 课本词汇",
+      "example": "I went camping last Saturday.",
+      "translation": "我上周六去野营了。"
+    },
+    {
+      "word": "went fishing",
+      "wordTranslation": "去钓鱼了",
+      "phonetic": "/went ˈfɪʃɪŋ/",
+      "partOfSpeech": "v. phrase",
+      "etymology": "PEP 六下 Unit 3 课本词汇",
+      "example": "We also went fishing.",
+      "translation": "我们还去钓鱼了。"
+    },
+    {
+      "word": "rode",
+      "wordTranslation": "骑（ride的过去式）",
+      "phonetic": "/rəʊd/",
+      "partOfSpeech": "v.",
+      "etymology": "PEP 六下 Unit 3 课本词汇",
+      "example": "I rode a horse.",
+      "translation": "我骑马了。"
+    },
+    {
+      "word": "rode a bike",
+      "wordTranslation": "骑自行车了",
+      "phonetic": "/rəʊd ə baɪk/",
+      "partOfSpeech": "v. phrase",
+      "etymology": "PEP 六下 Unit 3 课本词汇",
+      "example": "I rode a bike in the park.",
+      "translation": "我在公园里骑了自行车。"
+    },
+    {
+      "word": "hurt",
+      "wordTranslation": "受伤",
+      "phonetic": "/hɜːt/",
+      "partOfSpeech": "v.",
+      "etymology": "PEP 六下 Unit 3 课本词汇",
+      "example": "I hurt my foot.",
+      "translation": "我的脚受伤了。"
+    },
+    {
+      "word": "took",
+      "wordTranslation": "拍照；带走（take的过去式）",
+      "phonetic": "/tʊk/",
+      "partOfSpeech": "v.",
+      "etymology": "PEP 六下 Unit 3 课本词汇",
+      "example": "We took pictures of the beautiful countryside.",
+      "translation": "我们给美丽的乡村拍了照片。"
+    },
+    {
+      "word": "ate",
+      "wordTranslation": "吃（eat的过去式）",
+      "phonetic": "/et/",
+      "partOfSpeech": "v.",
+      "etymology": "PEP 六下 Unit 3 课本词汇",
+      "example": "We ate fresh food.",
+      "translation": "我们吃了新鲜的食物。"
+    },
+    {
+      "word": "bought",
+      "wordTranslation": "买（buy的过去式）",
+      "phonetic": "/bɔːt/",
+      "partOfSpeech": "v.",
+      "etymology": "PEP 六下 Unit 4 课本词汇",
+      "example": "I bought some gifts.",
+      "translation": "我买了一些礼物。"
+    },
+    {
+      "word": "gift",
+      "wordTranslation": "礼物",
+      "phonetic": "/ɡɪft/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六下 Unit 4 课本词汇",
+      "example": "I bought some gifts for my friends.",
+      "translation": "我给朋友们买了一些礼物。"
+    },
+    {
+      "word": "saw",
+      "wordTranslation": "看见（see的过去式）",
+      "phonetic": "/sɔː/",
+      "partOfSpeech": "v.",
+      "etymology": "PEP 六下 Unit 4 课本词汇",
+      "example": "I saw lots of grapes there.",
+      "translation": "我在那里看到了很多葡萄。"
+    },
+    {
+      "word": "fell",
+      "wordTranslation": "跌倒（fall的过去式）",
+      "phonetic": "/fel/",
+      "partOfSpeech": "v.",
+      "etymology": "PEP 六下 Unit 4 课本词汇",
+      "example": "I fell off my bike last summer holiday.",
+      "translation": "去年暑假我从自行车上摔下来了。"
+    },
+    {
+      "word": "could",
+      "wordTranslation": "能（can的过去式）",
+      "phonetic": "/kʊd/",
+      "partOfSpeech": "modal v.",
+      "etymology": "PEP 六下 Unit 4 课本词汇",
+      "example": "Now I could go cycling every day.",
+      "translation": "现在我每天都能去骑自行车了。"
+    },
+    {
+      "word": "star",
+      "wordTranslation": "星",
+      "phonetic": "/stɑː(r)/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六下 Unit 4 课本词汇",
+      "example": "I looked up at the stars at night.",
+      "translation": "晚上我抬头看星星。"
+    },
+    {
+      "word": "easy",
+      "wordTranslation": "容易的",
+      "phonetic": "/ˈiːzi/",
+      "partOfSpeech": "adj.",
+      "etymology": "PEP 六下 Unit 4 课本词汇",
+      "example": "It is easy to learn English well.",
+      "translation": "学好英语是容易的。"
+    },
+    {
+      "word": "Internet",
+      "wordTranslation": "互联网",
+      "phonetic": "/ˈɪntənet/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六下 Unit 4 课本词汇",
+      "example": "Now there is Internet.",
+      "translation": "现在有互联网了。"
+    },
+    {
+      "word": "different",
+      "wordTranslation": "不同的",
+      "phonetic": "/ˈdɪfrənt/",
+      "partOfSpeech": "adj.",
+      "etymology": "PEP 六下 Unit 4 课本词汇",
+      "example": "The world was very different many years ago.",
+      "translation": "许多年前，世界很不一样。"
+    },
+    {
+      "word": "active",
+      "wordTranslation": "积极的；活跃的",
+      "phonetic": "/ˈæktɪv/",
+      "partOfSpeech": "adj.",
+      "etymology": "PEP 六下 Unit 4 课本词汇",
+      "example": "Now I love to ice-skate, so I like winter.",
+      "translation": "现在我喜欢滑冰，所以我喜欢冬天。"
+    },
+    {
+      "word": "race",
+      "wordTranslation": "赛跑",
+      "phonetic": "/reɪs/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六下 Unit 4 课本词汇",
+      "example": "There was no race in my old school.",
+      "translation": "我以前的学校没有赛跑活动。"
+    },
+    {
+      "word": "gym",
+      "wordTranslation": "体育馆",
+      "phonetic": "/dʒɪm/",
+      "partOfSpeech": "n.",
+      "etymology": "PEP 六下 Unit 4 课本词汇",
+      "example": "There was no gym in my school twenty years ago.",
+      "translation": "二十年前我的学校没有体育馆。"
+    }
+  ]
+}
